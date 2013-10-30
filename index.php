@@ -15,7 +15,7 @@
 	function do_email(){
 	
 		global $default_recipient;
-		global $default_suject;
+		global $default_subject;
 		global $bot_email;
 		global $reply_to;
 		
