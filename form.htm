@@ -6,9 +6,27 @@
 </head>
 <body>
 	<form action="index.php" method="POST">
-		<input name="redirect">
-		<textarea name="content" type="text"></textarea>
-		<input type="submit" value="Submit">
+		<div>
+			<label>
+				(opt) Success redirect page:
+				<input name="redirect">
+			</label>
+		</div>
+		<div>
+			<label>
+				(opt) Error redirect page:
+				<input name="error">
+			</label>
+		</div>
+		<div>
+			<label>
+				Message content
+				<textarea name="content" type="text"></textarea>
+			</label>
+		</div>
+		<div>
+			<input type="submit" value="Submit">
+		</div>
 	</form>
 </body>
 </html>

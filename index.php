@@ -6,9 +6,14 @@
 	
 	$method = $_SERVER['REQUEST_METHOD'];
 	if ($method == 'POST'){
-			do_email();
-			//and don't render the page
-			$redirect = from_request('redirect', 'success.htm');
+			$success = do_email();
+
+			$redirect = $success
+				? from_request('redirect', 'success.htm')
+				: from_request('error', 'error.htm');
+			
+			//Don't render the default page
+			// Redirect to success or fail
 			header("location: $redirect");
 	}
 
@@ -27,7 +32,7 @@
 			'X-Mailer: PHP/' . phpversion();
 
 		//echo "Sending $subject to $to\n----------\n$message\n----------\n$headers\n...";
-		mail($to, $subject, $message, $headers);
+		return mail($to, $subject, $message, $headers);
 		//echo "\n\n...Sent!";
 	}
 

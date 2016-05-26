@@ -12,12 +12,12 @@ POST to the bot's index page.
 
 ### Optional
 `subject`  
-`redirect` -- the page to redirect to after sending
+`redirect` -- the success page to redirect to
+`error` -- the error page to redirect to
 
-## Downfalls
+-----
 
-Currently no detection of failure to send.
+[Ste Griffiths][web] -- [@SteGriff][tw]
 
-## Cheers
-
-Stephen Griffiths -- @SteGriff -- stegriff.co.uk
+[web]: http://stegriff.co.uk
+[tw]: http://twitter.com/stegriff
